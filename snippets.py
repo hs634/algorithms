@@ -3,8 +3,6 @@ __author__ = 'harsh'
 
 class Snippets(object):
 
-    ""
-
     @staticmethod
     def main():
         Snippets.convert_integer_to_binary(16)
