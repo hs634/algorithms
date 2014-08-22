@@ -37,7 +37,7 @@ def is_substr_anagram(soFar, rest, superstr):
 
 
 def main():
-    soFar = is_substr_anagram("", "let", "arpana")
+    soFar = is_substr_anagram("", "an", "arpana")
     print soFar
 
 main()
