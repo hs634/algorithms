@@ -5,7 +5,7 @@ def bin_search(sequence, left, right, key):
         return -1
     if left >= right:
         return -1
-    mid = left + (right - left)/2;
+    mid = left + (right - left)/2
     if sequence[mid] == key:
         return mid
     else:

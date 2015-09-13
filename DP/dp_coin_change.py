@@ -36,7 +36,7 @@ class CoinChange(object):
 
     @staticmethod
     def main():
-        S = [1,2,4]
+        S = [2,4]
         N = 3
         print "Recursive Version: "
         print CoinChange().count_recursive(S, len(S), N)
