@@ -35,7 +35,7 @@ def find_rotation_point(sequence):
 
 
 def main():
-    sequence = [7,8,9,0]
+    sequence = [7,8,9,33, 1, 2]
     key = 5
     index = bin_search(sequence, 0, len(sequence)-1, key)
     print str(key) + " found at " + str(index)

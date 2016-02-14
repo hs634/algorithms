@@ -156,7 +156,7 @@ def generate_ironic_node_create(cidr):
                    })
         print command
 
-generate_ironic_node_create("192.168.122.65/24")
+generate_ironic_node_create([])
 
 
 

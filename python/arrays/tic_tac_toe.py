@@ -1,6 +1,6 @@
 __author__ = 'hs634'
 
-#!/usr/bin/env python
+# !/usr/bin/env python
 
 import random
 
@@ -13,14 +13,15 @@ class Tic(object):
 
     winners = ('X-win', 'Draw', 'O-win')
 
-    def __init__(self, squares=[]):
+    def __init__(self, squares=None):
         if len(squares) == 0:
             self.squares = [None for i in range(9)]
         else:
             self.squares = squares
 
     def show(self):
-        for element in [self.squares[i:i + 3] for i in range(0, len(self.squares), 3)]:
+        for element in [self.squares[i:i + 3] for i in
+                        range(0, len(self.squares), 3)]:
             print element
 
     def available_moves(self):
@@ -118,6 +119,7 @@ def get_enemy(player):
     if player == 'X':
         return 'O'
     return 'X'
+
 
 if __name__ == "__main__":
     board = Tic()

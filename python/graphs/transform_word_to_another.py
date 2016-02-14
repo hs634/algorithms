@@ -21,7 +21,6 @@ class Queue(object):
 
 
 class Solution(object):
-
     def transform(self, src, dest, dictionary):
         Q = Queue()
         routes = defaultdict(str)
@@ -50,10 +49,10 @@ class Solution(object):
     @staticmethod
     def get_all_transformations(temp, dictionary):
         results = []
-        for i,ch in enumerate(list(temp)):
+        for i, ch in enumerate(list(temp)):
             for numalpha in xrange(ord('a'), ord('z') + 1):
                 alpha = chr(numalpha)
-                perm = temp[:i] + alpha + temp[i+1:]
+                perm = temp[:i] + alpha + temp[i + 1:]
                 if perm in dictionary and perm != temp:
                     results.append(perm)
         return results
@@ -61,11 +60,13 @@ class Solution(object):
 
     @staticmethod
     def main():
-        dictionary = ['damp', 'lamp', 'like', 'limp', 'lime', 'camp', 'pain', 'pool', 'dike', 'duke']
+        dictionary = ['damp', 'lamp', 'like', 'limp', 'lime', 'camp', 'pain',
+                      'pool', 'dike', 'duke']
         src = 'damp'
         dest = 'like'
         path = Solution().transform(src, dest, dictionary)
-        print " --> ".join(path)
+        print path
+
 
 
 Solution.main()

@@ -71,8 +71,8 @@ class EditDistance(object):
 
     @staticmethod
     def main():
-        str1 = "abcd"
-        str2 = "gefd"
+        str1 = "abc"
+        str2 = "adc"
         print "Recursive:"
         print EditDistance().recursive(str1, str2)
         print "DP version:"

@@ -17,15 +17,12 @@ class QuickSort:
     def partition(self, lo, hi):
         pivot = lo
         lo += 1
-        done = False
-        while not done:
+        while lo <= hi:
             while lo <= hi and self.arr[lo] <= self.arr[pivot]:
                 lo += 1
             while lo <= hi and self.arr[hi] >= self.arr[pivot]:
                 hi -= 1
-            if lo > hi:
-                done = True
-            else:
+            if lo < hi:
                 self.arr[lo], self.arr[hi] = self.arr[hi], self.arr[lo]
                 hi -= 1
                 lo += 1

@@ -27,6 +27,6 @@ def lcs(a, b):
     return result
 
 def main():
-    print lcs("abc", "abcdefg")
+    print lcs("labcdefabc", "abcdefg")
 
 main()

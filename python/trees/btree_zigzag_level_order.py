@@ -72,6 +72,7 @@ class BinaryTree(object):
                     s1.push(s2_top.left)
                 if s2_top.right is not None:
                     s1.push(s2_top.right)
+                    
 
 
 class BinaryTreeRunner(object):

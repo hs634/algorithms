@@ -1,5 +1,6 @@
 __author__ = 'hs634'
 
+
 class Solution():
     def __init__(self):
         pass
@@ -16,16 +17,16 @@ class Solution():
                     k -= 1
                 else:
                     solution.append([arr[i], arr[j], arr[k]])
-                    j, k = j+1, k-1
-                    while j < k and arr[j] == arr[j-1]:
+                    j, k = j + 1, k - 1
+                    while j < k and arr[j] == arr[j - 1]:
                         j += 1
-                    while j < k and arr[k] == arr[k+1]:
+                    while j < k and arr[k] == arr[k + 1]:
                         k -= 1
             i += 1
-            while i < len(arr) - 2 and arr[i] == arr[i-1]:
+            while i < len(arr) - 2 and arr[i] == arr[i - 1]:
                 i += 1
         return solution
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     solution = Solution().three_sum_zero([-1, 0, 1, 2, -1, -4])
-    print solution

@@ -38,6 +38,7 @@ class StackWithMin(Stack):
         -> return the top of the minimum stack in constant time
     """
     def __init__(self):
+        Stack.__init__(self)
         self.main_stack = Stack()
         self.min_stack = Stack()
 

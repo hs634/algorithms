@@ -27,7 +27,7 @@ def find_contiguous_subset1(subset):
 
 def main():
     subset = [4,-1,5,6,-13,2]
-    k = find_contiguous_subset(subset)
+    k = find_contiguous_subset1(subset)
     print k
 
 main()

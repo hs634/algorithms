@@ -3,7 +3,7 @@ __author__ = 'harsh'
 
 def kadanes(sequence):
     start_index, end_index, sum_start = -1, -1, -1
-    maxsum, curr_sum =0, 0
+    maxsum, curr_sum = 0, 0
 
     for i, k in enumerate(sequence):
         curr_sum += k
