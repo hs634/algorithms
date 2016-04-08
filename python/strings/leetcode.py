@@ -31,4 +31,4 @@ class Solution(object):
                 begin += 1
         return indices
 
-Solution().findSubstring("barfoothefoobarman", ["foo","bar"])
+print Solution().findSubstring("barfoothefoobarman", ["foo","bar"])
