@@ -1,9 +1,13 @@
+# 
 # Definition for a  binary tree node
 # class TreeNode(object):
 #     def __init__(self, x):
 #         self.val = x
 #         self.left = None
 #         self.right = None
+
+# http://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion-and-without-stack/
+#
 
 class BSTIterator(object):
     def __init__(self, root):
