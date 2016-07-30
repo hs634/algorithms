@@ -82,6 +82,8 @@ def allDecryptions(string):
 
     return allD
 
+
+print "HEre"
 for string in allDecryptions("IIIIXX"):
     print string
 print "Finished"

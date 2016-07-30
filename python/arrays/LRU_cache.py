@@ -24,7 +24,7 @@ class LinkedListCache(object):
             node.next.prev = node.prev
 
     def set_head(self, node):
-        node.pre = None
+        node.prev = None
         node.next = self.head
 
         if self.head is not None:
