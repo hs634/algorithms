@@ -42,3 +42,27 @@ assert sqrt(3) == False
 assert sqrt(55) == False
 
 print sqrt_math(16)
+
+def sqrt_precise(num):
+    if num < 0:
+        raise ValueError
+    if num == 1:
+        return 1
+    low = 0
+    high = (num/2.0) + 1
+    if num < 1:
+        high = 1.0
+    precision = 0.0001
+    mid = low + (high -low)/2
+    while abs(num - (mid * mid)) > precision:
+        sq = mid**2
+        if sq == num:
+            return mid
+        elif sq < num:
+            low = mid
+        else:
+            high = mid
+        mid = low + (high - low) / 2
+    return mid
+
+print sqrt_precise(10)

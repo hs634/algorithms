@@ -20,7 +20,7 @@ def permute(a, l, r):
             a[l], a[i] = a[i], a[l]  # backtrack
 
 
-string = "ABC"
+string = "ABCD"
 n = len(string)
 a = list(string)
 permute(a, 0, n - 1)

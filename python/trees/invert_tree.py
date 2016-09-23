@@ -88,3 +88,26 @@ def invert_tree(root):
     root.left, root.right = None, None
     return newroot
 
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+class Solution:
+    # @param {TreeNode} root
+    # @return {TreeNode}
+    def upsideDownBinaryTree(self, root):
+        return self.dfs(root, None)
+
+    def dfs(self, p, parent):
+        if not p:
+            return parent
+
+        root = self.dfs(p.left, p)
+        p.left = parent.right if parent else None
+        p.right = parent
+        return root
+

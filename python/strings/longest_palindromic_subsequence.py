@@ -30,7 +30,7 @@ def dp_lps(arr):
         L[i][i] = 1
 
     for l in range(2, n+1):
-        for i in range(0, n-l+1):
+        for i in range(n-l+1):
             j = i + l - 1
             if l == 2 and arr[i] == arr[j]:
                 L[i][j] = 2
@@ -46,7 +46,7 @@ def dp_lps(arr):
     j = n - 1
     i = 0
     while i < n and j >= 0:
-        if L[i][j] == L[i+1][j-1] + 2:
+        if arr[i] == arr[j]:
             result[index] = arr[j]
             result[length-index] = arr[j]
             index -= 1
@@ -67,6 +67,8 @@ def dp_lps(arr):
 print dp_lps([1,2,4,5,1])
 
 print dp_lps([1,2,1,2,1])
+
+print dp_lps(['a','g','b','d','b','a'])
 
 
 
